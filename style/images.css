@@ -1,0 +1,90 @@
+section:nth-of-type(4){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+}
+
+section:nth-of-type(4)>h2{
+    margin-top: 6vh;
+}
+
+.images{
+    width: 70vw;
+    height: 70vh;
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+.images>img{
+    width: 70vw;
+    height: 70vh;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    object-fit: cover;
+}
+
+/* Skip button */
+
+section:nth-of-type(4)>.images>#skipButton2{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section:nth-of-type(4)>.images>#skipButton2>img{
+    width: 6%;
+    filter: invert(1);
+}
+
+section:nth-of-type(4) #skipButton2>img:first-of-type{
+    transform: rotate(180deg);
+}
+
+
+/* Visibility */
+
+.images>div#skipButton2{
+    visibility: hidden;
+    opacity: 0;
+}
+.images:hover>div#skipButton2{
+    transition: 1s ease ;
+    visibility: visible;
+    opacity: 1;
+}
+
+section:nth-of-type(4)>div>img:not(:first-child){ 
+    display: none;
+}
+
+
+/* SkipCircle */
+
+#skipCircle{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+
+}
+
+#skipCircle>span{
+    width: 15px;
+    height: 15px;
+    background-color: rgba(78, 74, 74, 0.5);
+    border: white solid 1.7px;
+    border-radius: 50%;
+}
+
+#skipCircle>span.active{
+    background-color: #fff;
+    transform: scale(1.4);
+    margin: 0 3px 0 3px;
+    transition: 0.3s;
+}

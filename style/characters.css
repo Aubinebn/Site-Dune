@@ -1,0 +1,69 @@
+/* Grid */
+section:nth-of-type(3){
+    display: grid;
+    grid-template-rows: 5vh 40vh;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50vh;
+}
+
+/* Content */
+section:nth-of-type(3)>h2{
+    padding-left: 8vw;
+}
+
+section:nth-of-type(3)>.charactersNames{
+    grid-column: 1 / span 2;
+    padding: 9vh 5vw;
+    margin: 1vh 0;
+    background-color: rgba(184, 184, 184, 0.452);
+    position: relative;
+}
+section:nth-of-type(3)>.charactersNames>p{
+    position: absolute;
+}
+
+section:nth-of-type(3)>.charactersPictures{
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 33vw;
+    position: relative;
+    bottom: 40vh;
+    left: 10%;
+}
+section:nth-of-type(3)>.charactersPictures>img{
+    position: absolute;
+    width: 100%;
+}
+
+section:nth-of-type(3) #skipButton>img{
+    z-index: 10;
+    position: absolute;
+    top: 40vh;
+    max-width: 40px;
+}
+section:nth-of-type(3) #skipButton>img:first-of-type{
+    transform: rotate(180deg);
+}
+
+section:nth-of-type(3) #skipButton>img:last-of-type{
+    right: 0%;
+}
+
+/* Visibility */
+
+.charactersPictures>div#skipButton{
+    visibility: hidden;
+    opacity: 0;
+}
+.charactersPictures:hover>div#skipButton{
+    transition: 1s ease ;
+    visibility: visible;
+    opacity: 1;
+}
+
+section:nth-of-type(3)>div>p:not(:first-child){
+    display: none;
+}
+section:nth-of-type(3)>div>img:not(:first-child){ 
+    display: none;
+}

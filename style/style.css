@@ -1,0 +1,129 @@
+/* Import Fonts */
+
+@font-face {
+    font-family: 'ReadexPro';
+    src: url(../fonts/ReadexPro-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+
+body {
+    color: white;
+    font-family: 'ReadexPro',sans-serif;
+}
+
+/*  icones et logos page 1  */
+
+header>img {
+    max-width: 15vw;
+    margin-left: 2vw;
+    margin-top: 3vh;
+    position: fixed;
+}
+
+#studios>a>svg {
+    height: 5vh;
+    fill: white;
+}
+
+#studios>a>svg:hover {
+    fill: rgb(230, 214, 75);
+}
+
+#social>a>svg {
+    height: 4.5vh;
+    fill: white;
+}
+
+#social>a>svg:hover {
+    fill: rgb(230, 214, 75);
+}
+
+#studios {
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+
+#social {
+    position: fixed;
+    bottom: 10%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 23vh;
+    color: white;
+}
+
+/*  Background scroll snapping   */
+
+section {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section:nth-of-type(1) {
+    background-image: url('../medias/images/dune-timothee-chalamet.jpg');
+}
+
+section:nth-of-type(2) {
+    background-image: url('../medias/images/dune-sharon-duncan-brewster.jpeg');
+}
+
+section:nth-of-type(3) {
+    background-image: url('../medias/images/dune-cast-scaled.jpeg');
+}
+
+section:nth-of-type(4) {
+    background-image: url('../medias/images/dune-production_01.jpg');
+}
+
+section:nth-of-type(5) {
+    background-image: url('../medias/images/dune-timothee-chalamet-rebecca-ferguson.jpeg');
+}
+
+div#scrollbgcontainer {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+div>section.scrollbg {
+    scroll-snap-align: start;
+}
+/* Scrollbar  */
+/* /!\ support */
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #4f4f4f63;
+    border-radius: 10px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgba(25, 25, 25, 0.397);
+    border-radius: 10px;
+}

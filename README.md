@@ -5,4 +5,4 @@ Travail réalisé dans le cadre de ma deuxiéme année de formation en MMI à l'
 
 Ce travail m'a permis de découvrir l'utilisation de <B> Jquery </B> ainsi que de <B>l'API leaflet</B>.
 
-Voir le site : <a href ="tps://aubinebn.github.io/Site-Dune/">Le site Dune</a>
+Voir le site : <a href ="https://aubinebn.github.io/Site-Dune/">Le site Dune</a>
